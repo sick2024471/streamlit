@@ -1,10 +1,33 @@
 import streamlit as st
 
-st.title('추론하는 프로그램')
-st.header('추론 방식을 선택하세요')
+class MultiApp:
+    def __init__(self):
+        self.apps = []
 
-if st.button("귀납법"):
-  st.write("귀납법 추론을 선택하셨습니다.")
+    def add_app(self, title, func):
 
-if st.button("연역법"):
-  st.write("연역법 추론을 선택하셨습니다.")
+        self.apps.append({
+            "title": title,
+            "function": func
+        })
+
+    def run(self):
+
+        st.sidebar.title("Python Stat Tools v3.2")
+        st.sidebar.subheader("by Ken Harmon")
+        st.session_state.gs_URL = st.sidebar.text_input("Public Google Sheet URL:","https://docs.google.com/spreadsheets/d/1Fx7f6rM5Ce331F9ipsEMn-xRjUKYiR3R_v9IDBusUUY/edit#gid=0") 
+               
+        app = st.sidebar.radio(
+            '',
+            self.apps,
+            format_func=lambda app: app['title'])
+
+        app['function']()
+def g():
+  st.title("귀납법 프로그램 실행합니다.")
+
+def y():
+  st.title("연역법 프로그램 실행합니다.")
+infer = MultiApp()
+infer.add_app("귀납법 입력",g.app)
+infer.add_app("귀납법 입력",y.app)
