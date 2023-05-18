@@ -21,13 +21,13 @@ class MultiApp:
             '',
             self.apps,
             format_func=lambda app: app['title'])
-
+    
         app['function']()
-def g():
-  st.title("귀납법 프로그램 실행합니다.")
+    def g():
+        st.title("귀납법 프로그램 실행합니다.")
 
-def y():
-  st.title("연역법 프로그램 실행합니다.")
+    def y():
+        st.title("연역법 프로그램 실행합니다.")
 infer = MultiApp()
-infer.add_app("귀납법 입력",g.app)
-infer.add_app("귀납법 입력",y.app)
+infer.add_app("귀납법 입력", g.app)
+infer.add_app("귀납법 입력", y.app)
