@@ -31,3 +31,4 @@ def y():
 infer = MultiApp()
 infer.add_app("귀납법 입력", g)
 infer.add_app("귀납법 입력", y)
+infer.run()
