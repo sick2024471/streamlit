@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 messages = []
 content = ""
