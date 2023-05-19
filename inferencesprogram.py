@@ -24,8 +24,8 @@ class MultiApp:
         app['function']()
 def g():
     st.title("귀납법 프로그램 실행합니다.")
-    Ginfer1 = st.text_input("대전체")
-    Ginfer2 = st.text_input
+    Ginfer1 = st.text_input("개별적 사실", value = "여러문장 입력시 ,로 구분해서 쓰시오")
+    Ginfer2 = st.text_input("소전체")
 def y():
     st.title("연역법 프로그램 실행합니다.")
     Yinfer1 = st.text_input("대전체")
