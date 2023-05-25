@@ -7,6 +7,6 @@ if st.button("결정"):
   Ginfer1 = []
   while i < number:
     Ginfer1.append(st.text_input("개별적 사실"))
-    i++
+    i += 1
   Ginfer2 = st.text_input("소전제")
 
