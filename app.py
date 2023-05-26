@@ -9,4 +9,5 @@ for i in range(number):
     Ginfer1.append(fact)
 
 Ginfer2 = st.text_input("소전제")
-
+if button ("-"):
+    st.write("-")
