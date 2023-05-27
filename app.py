@@ -10,9 +10,11 @@ for i in range(number):
     if st.button("=", key="="):
         fact.append(a)
         fact.append("=")
+        b = st.text_input("계속 입력", key = "continue")
     if st.button("∧(and)", key="and"):
         fact.append(a)
-        fact.append("∧") 
+        fact.append("∧")
+        b = st.text_input("계속 입력", key = "continue")
     if st.button("∨(or)", key="or"):
         st.text_input(label="", value=str("∨"), key="or_in")
     
