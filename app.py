@@ -22,6 +22,7 @@ for i in range(number):
     if st.button("↔(equal)", key="equal"):
         st.text_input(label="", value=str("↔"), key="equal_in")
     fact.append(a)
+    st.write(fact)
     Ginfer1.append(fact)
 Ginfer2 = st.text_input("소전제")
 if button ("-"):
