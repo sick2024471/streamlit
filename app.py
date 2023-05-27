@@ -8,12 +8,12 @@ for i in range(number):
     fact = []
     a = st.text_input("개별적 사실", key = i)
     if st.button("=", key="="):
-        fact.append(a)
-        fact.append("=")
+        fact.extend(a)
+        fact.extend("=")
         b = st.text_input("계속 입력", key = "continue")
     if st.button("∧(and)", key="and"):
-        fact.append(a)
-        fact.append("∧")
+        fact.extend(a)
+        fact.extend("∧")
         b = st.text_input("계속 입력", key = "continue")
     if st.button("∨(or)", key="or"):
         st.text_input(label="", value=str("∨"), key="or_in")
