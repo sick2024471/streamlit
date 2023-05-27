@@ -1,15 +1,16 @@
 import streamlit as st
-
+import SessionState
 st.title("귀납법 프로그램 실행합니다.")
 
 Ginfer1 = []
 number = st.number_input("개별적 사실 몇개 입력하시겠습니까?",1,5)
 for i in range(number):
     fact = []
-    a = st.text_input("개별적 사실", key = i)
+    ss = SessionState.get(fact=fact)
+    a = st.text_input("개별적 사실")
     if st.button("=", key="="):
-        fact.extend(a)
-        fact.extend("=")
+        ss.fact.extend(a)
+        ss.fact.extend("=")
         b = st.text_input("계속 입력", key = "continue")
     if st.button("∧(and)", key="and"):
         fact.extend(a)
@@ -26,7 +27,7 @@ for i in range(number):
 
     if st.button("↔(equal)", key="equal"):
         st.text_input(label="", value=str("↔"), key="equal_in")
-    st.write(fact)
+    st.write(ss.st)
     Ginfer1.append(fact)
 Ginfer2 = st.text_input("소전제")
 if button ("-"):
