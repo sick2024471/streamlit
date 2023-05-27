@@ -8,7 +8,7 @@ for i in range(number):
     fact = []
     a = st.text_input("개별적 사실을 입력하세요", key = i)
     if st.button("∧(and)", key="and"):
-      a.append("∧")
+      fact.append("∧")
 
     if st.button("∨(or)", key="or"):
         st.text_input(label="", value=str("∨"), key="or_in")
@@ -21,7 +21,8 @@ for i in range(number):
 
     if st.button("↔(equal)", key="equal"):
         st.text_input(label="", value=str("↔"), key="equal_in")
-
+    fact.append(a)
+    Ginfer1.append(fact)
 Ginfer2 = st.text_input("소전제")
 if button ("-"):
     st.write("-")
