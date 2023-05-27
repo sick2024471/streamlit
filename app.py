@@ -8,8 +8,8 @@ for i in range(number):
     fact = []
     a = st.text_input("개별적 사실", key = i)
     if st.button("=", key="="):
-        fact.append("=")
         fact.append(a)
+        fact.append("=")
     if st.button("∧(and)", key="and"):
         fact.append("∧") 
     if st.button("∨(or)", key="or"):
