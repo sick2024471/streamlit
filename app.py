@@ -10,6 +10,7 @@ for i in range(number):
     if st.button("=", key="="):
         fact.append(a)
         fact.append("=")
+        a = st.text_input("개별적 사실", key = i)
     if st.button("∧(and)", key="and"):
         fact.append("∧") 
     if st.button("∨(or)", key="or"):
